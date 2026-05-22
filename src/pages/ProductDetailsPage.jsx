@@ -60,7 +60,11 @@ function ProductDetailsPage() {
         <p className="product-details-text">
           <strong>Description:</strong> {product.description}
         </p>
-        <RatingStars rate={product.rating?.rate} />
+        <RatingStars
+          key={product.id}
+          rate={product.rating?.rate}
+          productId={product.id}
+        />
       </article>
 
       <button

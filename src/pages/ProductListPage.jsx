@@ -47,7 +47,11 @@ function ProductListPage() {
             <Link to={`/product/${product.id}`} className="product-title-link">
               {product.title}
             </Link>
-            <RatingStars rate={product.rating?.rate} />
+            <RatingStars
+              key={product.id}
+              rate={product.rating?.rate}
+              productId={product.id}
+            />
           </article>
         ))}
       </section>
